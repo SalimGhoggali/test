@@ -39,6 +39,12 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        // Add these
+    configurations.all {
+            resolutionStrategy {
+                force 'androidx.browser:browser:1.2.0'
+            }
+        }
     }
 
     buildTypes {
@@ -48,12 +54,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-    // Add these
-    configurations.all {
-            resolutionStrategy {
-                force 'androidx.browser:browser:1.2.0'
-            }
-        }
+    
 }
 
 flutter {
