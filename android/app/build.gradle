@@ -48,6 +48,12 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    // Add these
+    configurations.all {
+            resolutionStrategy {
+                force 'androidx.browser:browser:1.2.0'
+            }
+        }
 }
 
 flutter {
